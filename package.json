@@ -2,6 +2,8 @@
   "name": "wpvizir",
   "version": "0.0.1",
   "description": "Make WordPress projects workflow easier.",
+  "readmeFilename": "README.md",
+  "license": "MIT",
   "main": "./lib/index.js",
   "preferGlobal": true,
   "bin": {
@@ -19,8 +21,11 @@
     "WordPress",
     "Vizir"
   ],
-  "author": "mariovalney",
-  "license": "MIT",
+  "author": {
+    "name": "mariovalney",
+    "email": "mariovalney@gmail.com",
+    "homepage": "https://mariovalney.com"
+  },
   "bugs": {
     "url": "https://github.com/Vizir/wpvizir/issues"
   },
