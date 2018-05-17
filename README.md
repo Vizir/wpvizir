@@ -1,5 +1,7 @@
 # Vizir WordPress CLI
 
+[![NPM version][npm-image]][npm-url]
+
 It's a command line interface to make your WP development easier and faster.
 
 ## How To Use
