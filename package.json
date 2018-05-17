@@ -2,7 +2,11 @@
   "name": "wpvizir",
   "version": "0.0.1",
   "description": "Make WordPress projects workflow easier.",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "preferGlobal": true,
+  "bin": {
+    "wpvizir": "./bin/global.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
