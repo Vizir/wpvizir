@@ -2,12 +2,16 @@
   "name": "wpvizir",
   "version": "0.0.1",
   "description": "Make WordPress projects workflow easier.",
-  "readmeFilename": "README.md",
+  "homepage": "https://github.com/Vizir/wpvizir#readme",
+  "author": "Vizir Team <contato@vizir.com.br> (https://vizir.com.br)",
+  "contributors": [
+    "Mário Valney <mariovalney@gmail.com>"
+  ],
   "license": "MIT",
-  "main": "./lib/index.js",
+  "main": "index.js",
   "preferGlobal": true,
   "bin": {
-    "wpvizir": "./bin/global.js"
+    "wpvizir": "./bin/wpvizir.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,18 +20,12 @@
     "type": "git",
     "url": "git+https://github.com/Vizir/wpvizir.git"
   },
+  "bugs": {
+    "url": "https://github.com/Vizir/wpvizir/issues"
+  },
   "keywords": [
     "WP",
     "WordPress",
     "Vizir"
-  ],
-  "author": {
-    "name": "mariovalney",
-    "email": "mariovalney@gmail.com",
-    "homepage": "https://mariovalney.com"
-  },
-  "bugs": {
-    "url": "https://github.com/Vizir/wpvizir/issues"
-  },
-  "homepage": "https://github.com/Vizir/wpvizir#readme"
+  ]
 }
