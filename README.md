@@ -17,3 +17,6 @@ The Vizir WordPress CLI is published under MIT.
 ## Developers
 
 [Mário Valney](https://profiles.wordpress.org/mariovalney/)
+
+[npm-url]: https://www.npmjs.com/package/wpvizir
+[npm-image]: https://img.shields.io/npm/v/wpvizir.svg?style=for-the-badge
