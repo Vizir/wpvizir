@@ -35,6 +35,7 @@
     "coveralls": "^3.0.1",
     "expect": "^22.4.3",
     "fined": "^1.1.0",
+    "fs-extra": "^6.0.1",
     "interpret": "^1.1.0",
     "istanbul": "^0.4.5",
     "istanbul-coveralls": "^1.0.3",
