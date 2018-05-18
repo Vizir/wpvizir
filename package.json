@@ -15,7 +15,7 @@
   },
   "scripts": {
     "test": "mocha --recursive",
-    "cover": "istanbul cover _mocha --report lcovonly",
+    "cover": "istanbul cover _mocha --report lcovonly --recursive .",
     "coveralls": "npm run cover && istanbul-coveralls"
   },
   "repository": {
