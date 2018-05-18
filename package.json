@@ -14,7 +14,9 @@
     "wpvizir": "./bin/wpvizir.js"
   },
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "mocha --recursive",
+    "cover": "istanbul cover _mocha --report lcovonly",
+    "coveralls": "npm run cover && istanbul-coveralls"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,9 @@
     "Vizir"
   ],
   "devDependencies": {
+    "coveralls": "^3.0.1",
+    "istanbul": "^0.4.5",
+    "istanbul-coveralls": "^1.0.3",
     "mocha": "^5.1.1"
   }
 }
