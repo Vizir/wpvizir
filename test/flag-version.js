@@ -1,7 +1,7 @@
 'use strict';
 
 var expect = require('expect');
-var runner = require('./lib/runner');
+var runner = require('./helpers/runner');
 
 var version = require('../package.json').version;
 
