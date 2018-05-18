@@ -1,14 +1,11 @@
 'use strict';
 
 var exec = require('child_process').exec;
-var path = require('path');
-var fined = require('fined');
-
-var path = findCli();
+var pathfinder = require('./pathfinder');
 
 function runner() {
   function wpvizir(command) {
-    return 'node ' + findCli() + ' ' + command;
+    return 'node ' + pathfinder().wpvizir() + ' ' + command;
   }
 
   function eraseTime(text) {
@@ -26,24 +23,6 @@ function runner() {
         callback(err, stdout, stderr)
       });
     }
-  }
-}
-
-function findCli() {
-  try {
-    return path.join(require.resolve('wpvizir'), '../bin/wpvizir.js');
-  } catch (e) {
-    var found = fined({
-      path: 'bin/wpvizir',
-      extensions: '.js',
-      findUp: true
-    });
-
-    if (found) {
-      return found.path;
-    }
-
-    throw e;
   }
 }
 

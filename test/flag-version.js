@@ -3,8 +3,6 @@
 var expect = require('expect');
 var runner = require('./lib/runner');
 
-// var eraseTime = require('gulp-test-tools').eraseTime;
-
 var version = require('../package.json').version;
 
 describe('flag: --version', function() {
