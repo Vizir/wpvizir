@@ -33,12 +33,15 @@
   "devDependencies": {
     "chalk": "^2.4.1",
     "coveralls": "^3.0.1",
+    "expect": "^22.4.3",
+    "fined": "^1.1.0",
     "interpret": "^1.1.0",
     "istanbul": "^0.4.5",
     "istanbul-coveralls": "^1.0.3",
     "liftoff": "^2.5.0",
     "minimist": "^1.2.0",
     "mocha": "^5.1.1",
+    "path": "^0.12.7",
     "pre-commit": "^1.2.2"
   }
 }
