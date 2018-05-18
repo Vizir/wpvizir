@@ -12,6 +12,7 @@ describe('flag: --version', function() {
       expect(err).toEqual(null);
       expect(stderr).toEqual('');
       expect(stdout).toEqual('Version: ' + version);
+
       done(err);
     });
   });
