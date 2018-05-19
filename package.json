@@ -15,8 +15,8 @@
   },
   "scripts": {
     "test": "mocha --recursive",
-    "cover": "istanbul cover _mocha --recursive --report lcovonly .",
-    "coveralls": "npm run cover && istanbul-coveralls"
+    "cover": "nyc --reporter=lcov --reporter=text-summary npm test",
+    "coveralls": "nyc --reporter=text-lcov npm test | coveralls"
   },
   "repository": {
     "type": "git",
@@ -42,6 +42,7 @@
     "liftoff": "^2.5.0",
     "minimist": "^1.2.0",
     "mocha": "^5.1.1",
+    "nyc": "^11.8.0",
     "path": "^0.12.7",
     "pre-commit": "^1.2.2"
   }
