@@ -17,7 +17,7 @@ const Liftoff = new liftoff({
 var options = minimist(process.argv.slice(2));
 
 function invoke(env) {
-  if (options.version || options.version) {
+  if (options.version || options.v) {
     commander('version');
     process.exit(0);
   }
