@@ -1,0 +1,6 @@
+[
+  {
+    "command": "--version",
+    "errors": ["version", "v"]
+  }
+]
