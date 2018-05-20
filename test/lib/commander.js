@@ -24,4 +24,9 @@ describe('lib: commander', function() {
       });
   });
 
+  it('should return false if command don\'t exist', function(done) {
+    expect(commander('ofcoursethiscommandisinvalid')).toBe(false);
+    done(0);
+  });
+
 });
