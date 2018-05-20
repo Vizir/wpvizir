@@ -18,9 +18,10 @@ const Liftoff = new liftoff({
 });
 
 var minimistOpts = {
-  boolean: [ "version" ],
+  boolean: [ 'version', 'global', 'local' ],
+  string: [ 'set', 'get' ],
   alias: {
-    "v": ["version"]
+    "v": [ 'version' ]
   }
 };
 
