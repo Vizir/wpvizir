@@ -39,14 +39,29 @@ describe('command: config', function() {
   it('should set global configs', function(done) {
     var locale = configurator.get('locale');
 
-    config.setGlobalConfig('locale', 'ofcoureanotvalidlocale');
-    runner.commandDo(config, 'config set --global locale ofcoureanotvalidlocale'); // Not necessary test DO
+    config.setGlobalConfig('locale', 'ofcourseanotvalidlocale');
+    runner.commandDo(config, 'config set --global locale ofcourseanotvalidlocale'); // Not necessary test DO
 
     var newLocale = configurator.get('locale');
-    expect(newLocale).toEqual('ofcoureanotvalidlocale');
+    expect(newLocale).toEqual('ofcourseanotvalidlocale');
 
     config.setGlobalConfig('locale', locale);
     runner.commandDo(config, 'config set --global locale ' + locale); // Not necessary test DO
+
+    done(0);
+  });
+
+  it('should set global configs', function(done) {
+    var locale = configurator.get('locale');
+
+    config.setGlobalConfig('ofcourseitsnotatruthyconfig', 'true');
+    config.setGlobalConfig('ofcourseitsnotafalsyconfig', 'false');
+
+    var trueConfig = configurator.get('ofcourseitsnotatruthyconfig');
+    expect(trueConfig).toBe(true);
+
+    var falseConfig = configurator.get('ofcourseitsnotafalsyconfig');
+    expect(falseConfig).toBe(false);
 
     done(0);
   });
