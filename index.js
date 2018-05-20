@@ -18,8 +18,12 @@ const Liftoff = new liftoff({
 const options = minimist(process.argv.slice(2));
 
 function invoke(env) {
-  if (options.version || options.v) {
-    commander('version');
+  if (options._.length) {
+    if (commander(options._[0])) process.exit(0);
+  }
+
+  if (!options._.length && (options.version || options.v)) {
+    commander('flags/version');
     process.exit(0);
   }
 

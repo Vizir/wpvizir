@@ -1,10 +1,10 @@
 'use strict';
 
 var expect = require('expect');
-var runner = require('../../helpers/runner');
+var runner = require('../../../helpers/runner');
 
-var version = require('../../../package.json').version;
-var __ = require('../../../lib/translater');
+var version = require('../../../../package.json').version;
+var __ = require('../../../../lib/translater');
 
 describe('flag: --version', function() {
 
@@ -23,6 +23,16 @@ describe('flag: --version', function() {
       expect(err).toEqual(null);
       expect(stderr).toEqual('');
       expect(stdout).toEqual(__('Version: %s', version));
+
+      done(err);
+    });
+  });
+
+  it('do not print the CLI version if flag is after any command', function(done) {
+    runner().command('anything --version').run(function(err, stdout, stderr) {
+      expect(err).toEqual(null);
+      expect(stderr).toEqual('');
+      expect(stdout).not.toContain(__('Version: %s', version));
 
       done(err);
     });
