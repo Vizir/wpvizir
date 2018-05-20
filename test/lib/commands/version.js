@@ -1,10 +1,10 @@
 'use strict';
 
 var expect = require('expect');
-var runner = require('./helpers/runner');
+var runner = require('../../helpers/runner');
 
-var version = require('../package.json').version;
-var __ = require('../lib/translater');
+var version = require('../../../package.json').version;
+var __ = require('../../../lib/translater');
 
 describe('flag: --version', function() {
 
