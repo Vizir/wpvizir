@@ -16,7 +16,7 @@ describe('flag: --version', function() {
   });
 
   it('print the version using CLI', function(done) {
-    runner().command('-v').run(function(err, stdout, stderr) {
+    runner.command('-v').run(function(err, stdout, stderr) {
       expect(err).toEqual(null);
       expect(stderr).toEqual('');
       expect(stdout).toEqual(__('Version: %s', packageVersion));
@@ -26,7 +26,7 @@ describe('flag: --version', function() {
   });
 
   it('do not print the CLI version if flag is after any command', function(done) {
-    runner().command('anything --version').run(function(err, stdout, stderr) {
+    runner.command('anything --version').run(function(err, stdout, stderr) {
       expect(err).toEqual(null);
       expect(stderr).toEqual('');
       expect(stdout).not.toContain(__('Version: %s', packageVersion));

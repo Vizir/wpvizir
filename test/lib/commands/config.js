@@ -6,7 +6,7 @@ var __ = require('../../../lib/translater');
 var configurator = require('../../../lib/configurator');
 
 var expect = require('expect');
-var runner = require('../../helpers/runner')();
+var runner = require('../../helpers/runner');
 var minimist = require('../../helpers/minimist');
 
 describe('command: config', function() {

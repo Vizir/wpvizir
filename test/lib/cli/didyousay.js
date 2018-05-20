@@ -14,7 +14,7 @@ describe('lib: cli/didyousay', function() {
   });
 
   it('should log suggestion', function(done) {
-    runner().command('version').run(function(err, stdout, stderr) {
+    runner.command('version').run(function(err, stdout, stderr) {
       expect(err).toEqual(null);
       expect(stderr).toEqual('');
       expect(stdout).toEqual(__('Did you want to say that?') + "\n" + '    wpvizir --version');
@@ -24,8 +24,8 @@ describe('lib: cli/didyousay', function() {
   });
 
   it('should return suggestion for: --version', function(done) {
-    expect( runner().ignoreLog( () => { return didyousay('v'); } ) ).toBeTruthy();
-    expect( runner().ignoreLog( () => { return didyousay('version'); } ) ).toBeTruthy();
+    expect( runner.ignoreLog( () => { return didyousay('v'); } ) ).toBeTruthy();
+    expect( runner.ignoreLog( () => { return didyousay('version'); } ) ).toBeTruthy();
 
     done();
   });
