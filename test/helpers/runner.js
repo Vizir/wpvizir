@@ -2,6 +2,7 @@
 
 var exec = require('child_process').exec;
 var pathfinder = require('./pathfinder');
+var minimist = require('./minimist');
 
 function runner() {
   function wpvizir(command) {
@@ -16,6 +17,11 @@ function runner() {
     command: function(command) {
       command = wpvizir(command);
       return { command: command, run: this.run }
+    },
+    commandDo: function(commandObj, commandStr) {
+      this.ignoreLog(function() {
+        return commandObj.do(minimist(commandStr));
+      });
     },
     ignoreLog: function(whatToDo) {
       var oldLog = console.log;
