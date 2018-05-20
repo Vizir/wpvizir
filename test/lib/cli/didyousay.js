@@ -24,8 +24,9 @@ describe('lib: cli/didyousay', function() {
   });
 
   it('should return suggestion for: --version', function(done) {
-    expect(didyousay('version')).toBeTruthy();
-    expect(didyousay('v')).toBeTruthy();
+    expect( runner().ignoreLog( () => { return didyousay('v'); } ) ).toBeTruthy();
+    expect( runner().ignoreLog( () => { return didyousay('version'); } ) ).toBeTruthy();
+
     done();
   });
 

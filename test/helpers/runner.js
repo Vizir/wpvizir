@@ -17,6 +17,15 @@ function runner() {
       command = wpvizir(command);
       return { command: command, run: this.run }
     },
+    ignoreLog: function(whatToDo) {
+      var oldLog = console.log;
+      console.log = function() {};
+
+      var returnValue = whatToDo();
+      console.log = oldLog;
+
+      return returnValue;
+    },
     run: function(callback) {
       exec(this.command, function(err, stdout, stderr) {
         stdout = eraseTime(stdout);
