@@ -17,7 +17,7 @@ describe('lib: cli/didyousay', function() {
     runner().command('version').run(function(err, stdout, stderr) {
       expect(err).toEqual(null);
       expect(stderr).toEqual('');
-      expect(stdout).toEqual(__('Did want to say that?') + "\n" + '    wpvizir --version');
+      expect(stdout).toEqual(__('Did you want to say that?') + "\n" + '    wpvizir --version');
 
       done(err);
     });
