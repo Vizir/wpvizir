@@ -15,7 +15,7 @@ const Liftoff = new liftoff({
   extensions: interpret.jsVariants
 });
 
-var options = minimist(process.argv.slice(2));
+const options = minimist(process.argv.slice(2));
 
 function invoke(env) {
   if (options.version || options.v) {
