@@ -15,11 +15,18 @@ const Liftoff = new liftoff({
   extensions: interpret.jsVariants
 });
 
-const options = minimist(process.argv.slice(2));
+var minimistOpts = {
+  boolean: [ "version" ],
+  alias: {
+    "v": ["version"]
+  }
+};
+
+const options = minimist(process.argv.slice(2), minimistOpts);
 
 function invoke(env) {
   if (options._.length) {
-    if (commander(options._[0])) process.exit(0);
+    if (commander(options._[0], options, env)) process.exit(0);
   }
 
   if (!options._.length && (options.version || options.v)) {
