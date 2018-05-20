@@ -3,26 +3,23 @@
 var expect = require('expect');
 var runner = require('../../../helpers/runner');
 
-var version = require('../../../../package.json').version;
+var version = require('../../../../lib/commands/flags/version');
 var __ = require('../../../../lib/translater');
+
+var packageVersion = require('../../../../package.json').version;
 
 describe('flag: --version', function() {
 
-  it('print the CLI version using --version', function(done) {
-    runner().command('--version').run(function(err, stdout, stderr) {
-      expect(err).toEqual(null);
-      expect(stderr).toEqual('');
-      expect(stdout).toEqual(__('Version: %s', version));
-
-      done(err);
-    });
+  it('print the version', function(done) {
+    expect(version.getVersion()).toEqual(__('Version: %s', packageVersion));
+    done();
   });
 
-  it('print the CLI version using -v', function(done) {
+  it('print the version using CLI', function(done) {
     runner().command('-v').run(function(err, stdout, stderr) {
       expect(err).toEqual(null);
       expect(stderr).toEqual('');
-      expect(stdout).toEqual(__('Version: %s', version));
+      expect(stdout).toEqual(__('Version: %s', packageVersion));
 
       done(err);
     });
@@ -32,7 +29,7 @@ describe('flag: --version', function() {
     runner().command('anything --version').run(function(err, stdout, stderr) {
       expect(err).toEqual(null);
       expect(stderr).toEqual('');
-      expect(stdout).not.toContain(__('Version: %s', version));
+      expect(stdout).not.toContain(__('Version: %s', packageVersion));
 
       done(err);
     });
