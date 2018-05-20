@@ -27,7 +27,7 @@ function runner() {
       return returnValue;
     },
     run: function(callback) {
-      exec(this.command, function(err, stdout, stderr) {
+      return exec(this.command, function(err, stdout, stderr) {
         stdout = eraseTime(stdout);
         callback(err, stdout, stderr)
       });

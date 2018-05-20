@@ -15,7 +15,7 @@ describe('lib: commander', function() {
 
     fs.copy(testFile, movedFile)
       .then(function() {
-        expect(commander('commandertest', {env: 'test'})).toEqual('commander-test');
+        expect(commander('commandertest')).toBe(true);
 
         fs.remove(movedFile, done);
       })

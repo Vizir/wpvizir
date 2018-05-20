@@ -1,7 +1,7 @@
 'use strict';
 
 function commandertest(env) {
-  return 'commander-' + env.env;
+  return 'Just Check It Exists';
 }
 
 module.exports = commandertest;
