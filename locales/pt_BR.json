@@ -1,5 +1,6 @@
 {
   "Version: %s": "Versão: %s",
   "Version: {version}": "Versão: {version}",
-  "Did you want to say that?": "Você quis dizer?"
+  "Did you want to say that?": "Você quis dizer?",
+  "Something is missing.": "Alguma coisa está faltando."
 }

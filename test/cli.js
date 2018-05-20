@@ -8,11 +8,11 @@ var __ = require('../lib/translater');
 
 describe('wpvizir', function() {
 
-  it('should print nothing if running no valid command/flag', function(done) {
+  it('should show help if running no valid command/flag', function(done) {
     runner().command('').run(function(err, stdout, stderr) {
       expect(err).toEqual(null);
       expect(stderr).toEqual('');
-      expect(stdout).toEqual('');
+      expect(stdout).toEqual(__('Something is missing.'));
 
       done(err);
     });
