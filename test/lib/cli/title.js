@@ -1,6 +1,6 @@
 'use strict';
 
-var title = require('../../lib/cli/title');
+var title = require('../../../lib/cli/title');
 
 var expect = require('expect');
 
