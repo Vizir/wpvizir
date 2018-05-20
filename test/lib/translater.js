@@ -6,15 +6,22 @@ var translater = require('../../lib/translater');
 describe('translater', function() {
 
   it('should translater the string', function(done) {
-    var translations = [
-      ['Still just return strings', 'Still just return strings', 'pt_BR'],
-      ['Still just return strings', 'Still just return strings', 'en'],
-    ];
+    expect(translater('Version: %s')).toEqual('Versão: %s');
+    done(0);
+  });
 
-    for(var i = 0, length1 = translations.length; i < length1; i++){
-      expect(translater(translations[i][0])).toEqual(translations[i][1]);
-    }
+  it('should translater the string with values as string', function(done) {
+    expect(translater('Version: %s', '0.0.0')).toEqual('Versão: 0.0.0');
+    done(0);
+  });
 
+  it('should translater the string with values as object', function(done) {
+    expect(translater('Version: {version}', {version: '0.0.0'})).toEqual('Versão: 0.0.0');
+    done(0);
+  });
+
+  it('should return the string with no translations are found', function(done) {
+    expect(translater('Of course there\'s no translation for that')).toEqual('Of course there\'s no translation for that');
     done(0);
   });
 
