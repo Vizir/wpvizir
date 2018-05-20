@@ -2,5 +2,7 @@
   "Version: %s": "Versão: %s",
   "Version: {version}": "Versão: {version}",
   "Did you want to say that?": "Você quis dizer?",
-  "Something is missing.": "Alguma coisa está faltando."
+  "Something is missing.": "Alguma coisa está faltando.",
+  "These are your global configs:": "Aqui estão suas configurações globais:",
+  "These are your project configs:": "Aqui estão as configurações do seu projeto:"
 }
