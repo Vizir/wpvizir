@@ -26,13 +26,11 @@ describe('command: config set', function() {
     done(0);
   });
 
-  it('should set global config missing argument', function(done) {
+  it('should set global configs - missing argument', function(done) {
     runner.command('config set --global missingthevaluetothisoption').checkHelper('wpvizir config set', done);
   });
 
   it('should set global configs with TRUE/FALSE', function(done) {
-    var locale = configurator.get('locale');
-
     config.setGlobalConfig('ofcourseitsnotatruthyconfig', 'true');
     config.setGlobalConfig('ofcourseitsnotafalsyconfig', 'false');
 
